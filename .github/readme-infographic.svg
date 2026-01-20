@@ -1,0 +1,162 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 500" width="900" height="500">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#fef9f3"/>
+      <stop offset="100%" style="stop-color:#f5ebe0"/>
+    </linearGradient>
+    <linearGradient id="accentGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#8B6914"/>
+      <stop offset="100%" style="stop-color:#a67c52"/>
+    </linearGradient>
+    <filter id="shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="2" dy="2" stdDeviation="3" flood-color="#654321" flood-opacity="0.15"/>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="900" height="500" fill="url(#bgGrad)" rx="12"/>
+  <rect x="4" y="4" width="892" height="492" fill="none" stroke="#8B6914" stroke-width="2" rx="10" opacity="0.3"/>
+
+  <!-- Header -->
+  <g transform="translate(450, 50)">
+    <text x="0" y="0" text-anchor="middle" font-family="Georgia, serif" font-size="28" font-weight="bold" fill="#654321">
+      How OOLONG-Pairs Works
+    </text>
+    <line x1="-120" y1="15" x2="120" y2="15" stroke="url(#accentGrad)" stroke-width="3" stroke-linecap="round"/>
+  </g>
+
+  <!-- Three-column layout -->
+
+  <!-- Column 1: Input -->
+  <g transform="translate(80, 120)" filter="url(#shadow)">
+    <rect x="0" y="0" width="220" height="280" rx="8" fill="white" stroke="#8B6914" stroke-width="2"/>
+
+    <rect x="0" y="0" width="220" height="45" rx="8 8 0 0" fill="#8B6914"/>
+    <text x="110" y="30" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="white">
+      OOLONG Dataset
+    </text>
+
+    <g transform="translate(20, 65)">
+      <!-- Document icon -->
+      <rect x="0" y="0" width="50" height="65" rx="3" fill="#f5f5f5" stroke="#654321" stroke-width="1.5"/>
+      <g stroke="#a67c52" stroke-width="1">
+        <line x1="10" y1="15" x2="40" y2="15"/>
+        <line x1="10" y1="25" x2="40" y2="25"/>
+        <line x1="10" y1="35" x2="35" y2="35"/>
+        <line x1="10" y1="45" x2="40" y2="45"/>
+        <line x1="10" y1="55" x2="30" y2="55"/>
+      </g>
+
+      <text x="65" y="20" font-family="Arial, sans-serif" font-size="13" fill="#654321" font-weight="bold">100K+ chars</text>
+      <text x="65" y="38" font-family="Arial, sans-serif" font-size="11" fill="#8B6914">Long documents</text>
+      <text x="65" y="54" font-family="Arial, sans-serif" font-size="11" fill="#8B6914">+ Questions</text>
+    </g>
+
+    <line x1="20" y1="145" x2="200" y2="145" stroke="#e0d5c0" stroke-width="1"/>
+
+    <g transform="translate(20, 160)">
+      <text x="0" y="0" font-family="Arial, sans-serif" font-size="12" fill="#654321" font-weight="bold">Task Types:</text>
+      <g font-family="Arial, sans-serif" font-size="11" fill="#8B6914">
+        <text x="0" y="22">TREC Classification</text>
+        <text x="0" y="40">Numeric Reasoning</text>
+        <text x="0" y="58">Multi-hop QA</text>
+        <text x="0" y="76">Date Extraction</text>
+      </g>
+    </g>
+  </g>
+
+  <!-- Arrow 1 -->
+  <g transform="translate(310, 260)">
+    <path d="M0 0 L40 0" stroke="#8B6914" stroke-width="3" marker-end="url(#arrow)"/>
+  </g>
+
+  <!-- Column 2: Strategies -->
+  <g transform="translate(340, 120)" filter="url(#shadow)">
+    <rect x="0" y="0" width="220" height="280" rx="8" fill="white" stroke="#8B6914" stroke-width="2"/>
+
+    <rect x="0" y="0" width="220" height="45" rx="8 8 0 0" fill="#a67c52"/>
+    <text x="110" y="30" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="white">
+      Strategy Comparison
+    </text>
+
+    <!-- Strategy A -->
+    <g transform="translate(15, 60)">
+      <rect x="0" y="0" width="190" height="90" rx="5" fill="#fff8f0" stroke="#d4a574" stroke-width="1.5"/>
+      <text x="95" y="20" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#654321">Truncation</text>
+      <text x="95" y="38" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#8B6914">Baseline strategy</text>
+      <line x1="10" y1="48" x2="180" y2="48" stroke="#e0d5c0" stroke-width="1"/>
+      <text x="95" y="65" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#a67c52">Keep first 60%</text>
+      <text x="95" y="80" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#a67c52">+ last 40%</text>
+    </g>
+
+    <!-- VS -->
+    <text x="110" y="170" text-anchor="middle" font-family="Georgia, serif" font-size="14" font-weight="bold" fill="#8B6914">vs</text>
+
+    <!-- Strategy B -->
+    <g transform="translate(15, 180)">
+      <rect x="0" y="0" width="190" height="90" rx="5" fill="#f0f8f0" stroke="#6b8e23" stroke-width="1.5"/>
+      <text x="95" y="20" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#654321">RLM-RS</text>
+      <text x="95" y="38" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#6b8e23">Recursive chunking</text>
+      <line x1="10" y1="48" x2="180" y2="48" stroke="#d0e0c0" stroke-width="1"/>
+      <text x="95" y="65" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#6b8e23">Chunk + Process</text>
+      <text x="95" y="80" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#6b8e23">+ Synthesize</text>
+    </g>
+  </g>
+
+  <!-- Arrow 2 -->
+  <g transform="translate(570, 260)">
+    <path d="M0 0 L40 0" stroke="#8B6914" stroke-width="3" marker-end="url(#arrow)"/>
+  </g>
+
+  <!-- Column 3: Results -->
+  <g transform="translate(600, 120)" filter="url(#shadow)">
+    <rect x="0" y="0" width="220" height="280" rx="8" fill="white" stroke="#8B6914" stroke-width="2"/>
+
+    <rect x="0" y="0" width="220" height="45" rx="8 8 0 0" fill="#654321"/>
+    <text x="110" y="30" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="white">
+      Scored Results
+    </text>
+
+    <!-- Score display -->
+    <g transform="translate(55, 65)">
+      <circle cx="55" cy="45" r="40" fill="none" stroke="#e0d5c0" stroke-width="8"/>
+      <circle cx="55" cy="45" r="40" fill="none" stroke="#6b8e23" stroke-width="8"
+              stroke-dasharray="188 64" stroke-linecap="round" transform="rotate(-90 55 45)"/>
+      <text x="55" y="50" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="#654321">0.75</text>
+      <text x="55" y="68" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#8B6914">score</text>
+    </g>
+
+    <line x1="20" y1="160" x2="200" y2="160" stroke="#e0d5c0" stroke-width="1"/>
+
+    <g transform="translate(20, 175)">
+      <text x="0" y="0" font-family="Arial, sans-serif" font-size="12" fill="#654321" font-weight="bold">Scoring Methods:</text>
+      <g font-family="monospace" font-size="10" fill="#8B6914">
+        <text x="0" y="22">Numeric: 0.75^|error|</text>
+        <text x="0" y="40">Labels: exact match</text>
+        <text x="0" y="58">Dates: exact match</text>
+      </g>
+    </g>
+
+    <g transform="translate(20, 248)">
+      <rect x="0" y="0" width="180" height="22" rx="3" fill="#f5f5f5" stroke="#d4a574" stroke-width="1"/>
+      <text x="90" y="15" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#654321">SQLite + Export (JSON/CSV)</text>
+    </g>
+  </g>
+
+  <!-- Bottom: Integration modes -->
+  <g transform="translate(450, 440)">
+    <text x="0" y="0" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" fill="#654321">
+      <tspan font-weight="bold">Integration:</tspan>
+      <tspan fill="#8B6914"> SDK Mode (claude --print)</tspan>
+      <tspan fill="#654321"> | </tspan>
+      <tspan fill="#8B6914">Hooks Mode (SessionStart/Stop)</tspan>
+    </text>
+  </g>
+
+  <!-- Arrow marker -->
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#8B6914"/>
+    </marker>
+  </defs>
+</svg>

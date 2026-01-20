@@ -1,0 +1,174 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 640" width="1280" height="640">
+  <defs>
+    <!-- Warm gradient background -->
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#fef3e2"/>
+      <stop offset="50%" style="stop-color:#fce7c8"/>
+      <stop offset="100%" style="stop-color:#f5deb3"/>
+    </linearGradient>
+
+    <!-- Tea cup gradient -->
+    <linearGradient id="cupGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#8B6914"/>
+      <stop offset="100%" style="stop-color:#654321"/>
+    </linearGradient>
+
+    <!-- Tea liquid -->
+    <linearGradient id="teaGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#d4a574"/>
+      <stop offset="100%" style="stop-color:#a67c52"/>
+    </linearGradient>
+
+    <!-- Document gradient -->
+    <linearGradient id="docGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#ffffff"/>
+      <stop offset="100%" style="stop-color:#f0f0f0"/>
+    </linearGradient>
+
+    <!-- Hand-drawn filter -->
+    <filter id="sketch" x="-5%" y="-5%" width="110%" height="110%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.04" numOctaves="2" result="noise"/>
+      <feDisplacementMap in="SourceGraphic" in2="noise" scale="2" xChannelSelector="R" yChannelSelector="G"/>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1280" height="640" fill="url(#bg)"/>
+
+  <!-- Decorative organic shapes -->
+  <g opacity="0.15">
+    <!-- Flowing curves representing long context -->
+    <path d="M0 400 Q200 350 400 380 T800 360 T1280 400" stroke="#8B6914" stroke-width="3" fill="none" filter="url(#sketch)"/>
+    <path d="M0 420 Q250 380 500 400 T900 390 T1280 430" stroke="#a67c52" stroke-width="2" fill="none" filter="url(#sketch)"/>
+    <path d="M0 440 Q300 400 600 420 T1000 410 T1280 450" stroke="#654321" stroke-width="2" fill="none" filter="url(#sketch)"/>
+  </g>
+
+  <!-- Left side: Oolong tea cup illustration -->
+  <g transform="translate(180, 260)" filter="url(#sketch)">
+    <!-- Cup body -->
+    <ellipse cx="0" cy="80" rx="90" ry="25" fill="#654321"/>
+    <path d="M-90 0 Q-95 40 -90 80 Q0 105 90 80 Q95 40 90 0 Z" fill="url(#cupGrad)"/>
+    <ellipse cx="0" cy="0" rx="90" ry="25" fill="#8B6914"/>
+
+    <!-- Tea inside -->
+    <ellipse cx="0" cy="5" rx="75" ry="18" fill="url(#teaGrad)"/>
+
+    <!-- Steam wisps (organic curves) -->
+    <g stroke="#8B6914" stroke-width="2" fill="none" opacity="0.4">
+      <path d="M-20 -20 Q-25 -50 -15 -70 Q-5 -90 -15 -110">
+        <animate attributeName="d" dur="3s" repeatCount="indefinite"
+          values="M-20 -20 Q-25 -50 -15 -70 Q-5 -90 -15 -110;
+                  M-20 -20 Q-30 -50 -20 -70 Q-10 -90 -20 -110;
+                  M-20 -20 Q-25 -50 -15 -70 Q-5 -90 -15 -110"/>
+      </path>
+      <path d="M0 -25 Q10 -55 0 -80 Q-10 -100 5 -120">
+        <animate attributeName="d" dur="2.5s" repeatCount="indefinite"
+          values="M0 -25 Q10 -55 0 -80 Q-10 -100 5 -120;
+                  M0 -25 Q-5 -55 5 -80 Q15 -100 0 -120;
+                  M0 -25 Q10 -55 0 -80 Q-10 -100 5 -120"/>
+      </path>
+      <path d="M25 -20 Q30 -45 20 -65 Q10 -85 25 -100">
+        <animate attributeName="d" dur="3.5s" repeatCount="indefinite"
+          values="M25 -20 Q30 -45 20 -65 Q10 -85 25 -100;
+                  M25 -20 Q20 -45 25 -65 Q30 -85 20 -100;
+                  M25 -20 Q30 -45 20 -65 Q10 -85 25 -100"/>
+      </path>
+    </g>
+
+    <!-- Cup handle (organic) -->
+    <path d="M85 15 Q130 15 130 45 Q130 75 85 75" stroke="#654321" stroke-width="12" fill="none"/>
+    <path d="M85 15 Q120 15 120 45 Q120 75 85 75" stroke="#8B6914" stroke-width="6" fill="none"/>
+  </g>
+
+  <!-- Center: Document stack with chunks -->
+  <g transform="translate(500, 200)" filter="url(#sketch)">
+    <!-- Large document (background) -->
+    <rect x="0" y="0" width="180" height="240" rx="5" fill="url(#docGrad)" stroke="#654321" stroke-width="2"/>
+    <g stroke="#a67c52" stroke-width="1.5" opacity="0.4">
+      <line x1="20" y1="30" x2="160" y2="30"/>
+      <line x1="20" y1="50" x2="160" y2="50"/>
+      <line x1="20" y1="70" x2="140" y2="70"/>
+      <line x1="20" y1="90" x2="155" y2="90"/>
+      <line x1="20" y1="110" x2="130" y2="110"/>
+      <line x1="20" y1="130" x2="160" y2="130"/>
+      <line x1="20" y1="150" x2="145" y2="150"/>
+      <line x1="20" y1="170" x2="160" y2="170"/>
+      <line x1="20" y1="190" x2="120" y2="190"/>
+      <line x1="20" y1="210" x2="155" y2="210"/>
+    </g>
+
+    <!-- Arrow showing chunking -->
+    <path d="M200 120 L260 120" stroke="#8B6914" stroke-width="3" marker-end="url(#arrowhead)"/>
+
+    <!-- Small chunks (output) -->
+    <g transform="translate(280, 20)">
+      <rect x="0" y="0" width="70" height="55" rx="3" fill="url(#docGrad)" stroke="#654321" stroke-width="1.5"/>
+      <g stroke="#a67c52" stroke-width="1" opacity="0.5">
+        <line x1="10" y1="15" x2="60" y2="15"/>
+        <line x1="10" y1="28" x2="55" y2="28"/>
+        <line x1="10" y1="41" x2="50" y2="41"/>
+      </g>
+    </g>
+    <g transform="translate(280, 90)">
+      <rect x="0" y="0" width="70" height="55" rx="3" fill="url(#docGrad)" stroke="#654321" stroke-width="1.5"/>
+      <g stroke="#a67c52" stroke-width="1" opacity="0.5">
+        <line x1="10" y1="15" x2="60" y2="15"/>
+        <line x1="10" y1="28" x2="55" y2="28"/>
+        <line x1="10" y1="41" x2="45" y2="41"/>
+      </g>
+    </g>
+    <g transform="translate(280, 160)">
+      <rect x="0" y="0" width="70" height="55" rx="3" fill="url(#docGrad)" stroke="#654321" stroke-width="1.5"/>
+      <g stroke="#a67c52" stroke-width="1" opacity="0.5">
+        <line x1="10" y1="15" x2="55" y2="15"/>
+        <line x1="10" y1="28" x2="60" y2="28"/>
+        <line x1="10" y1="41" x2="48" y2="41"/>
+      </g>
+    </g>
+  </g>
+
+  <!-- Right side: Score/result visualization -->
+  <g transform="translate(950, 250)" filter="url(#sketch)">
+    <!-- Circular score indicator -->
+    <circle cx="80" cy="80" r="75" fill="none" stroke="#e0d5c0" stroke-width="12"/>
+    <circle cx="80" cy="80" r="75" fill="none" stroke="#8B6914" stroke-width="12"
+            stroke-dasharray="330 140" stroke-linecap="round" transform="rotate(-90 80 80)"/>
+
+    <!-- Check mark -->
+    <path d="M50 85 L70 105 L115 55" stroke="#654321" stroke-width="6" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+
+    <!-- Small decorative dots -->
+    <circle cx="160" cy="40" r="5" fill="#a67c52" opacity="0.4"/>
+    <circle cx="175" cy="60" r="3" fill="#8B6914" opacity="0.3"/>
+    <circle cx="0" cy="120" r="4" fill="#a67c52" opacity="0.4"/>
+  </g>
+
+  <!-- Title text -->
+  <g transform="translate(640, 520)">
+    <text x="0" y="0" text-anchor="middle" font-family="Georgia, serif" font-size="56" font-weight="bold" fill="#654321">
+      OOLONG-Pairs
+    </text>
+    <text x="0" y="50" text-anchor="middle" font-family="Georgia, serif" font-size="24" fill="#8B6914">
+      Long-Context Benchmark Harness for Claude Code Plugins
+    </text>
+  </g>
+
+  <!-- Decorative corner flourishes -->
+  <g stroke="#8B6914" stroke-width="2" fill="none" opacity="0.3">
+    <path d="M30 30 Q30 60 60 60" filter="url(#sketch)"/>
+    <path d="M30 30 Q60 30 60 60" filter="url(#sketch)"/>
+    <path d="M1250 30 Q1250 60 1220 60" filter="url(#sketch)"/>
+    <path d="M1250 30 Q1220 30 1220 60" filter="url(#sketch)"/>
+    <path d="M30 610 Q30 580 60 580" filter="url(#sketch)"/>
+    <path d="M30 610 Q60 610 60 580" filter="url(#sketch)"/>
+    <path d="M1250 610 Q1250 580 1220 580" filter="url(#sketch)"/>
+    <path d="M1250 610 Q1220 610 1220 580" filter="url(#sketch)"/>
+  </g>
+
+  <!-- Arrow marker definition -->
+  <defs>
+    <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#8B6914"/>
+    </marker>
+  </defs>
+</svg>

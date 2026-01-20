@@ -1,6 +1,15 @@
 # OOLONG-Pairs Benchmark Harness
 
+[![Python 3.11+](https://img.shields.io/badge/python-3.11+-3776ab?style=flat-square&logo=python&logoColor=white)](https://python.org)
+[![License: MIT](https://img.shields.io/badge/license-MIT-green?style=flat-square)](LICENSE)
+[![Claude Code](https://img.shields.io/badge/Claude-Code-cc785c?style=flat-square&logo=anthropic&logoColor=white)](https://claude.ai/code)
+[![HuggingFace Dataset](https://img.shields.io/badge/HuggingFace-OOLONG-ffd21e?style=flat-square&logo=huggingface&logoColor=black)](https://huggingface.co/datasets/oolongbench/oolong-synth)
+
 A benchmark harness for testing Claude Code plugins against the OOLONG long-context reasoning benchmark. Designed specifically for A/B testing the [rlm-rs](https://github.com/zircote/rlm-rs) memory plugin against baseline truncation strategies.
+
+<p align="center">
+  <img src=".github/readme-infographic.svg" alt="OOLONG-Pairs Architecture" width="800"/>
+</p>
 
 ## Overview
 
