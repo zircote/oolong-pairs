@@ -7,7 +7,7 @@ requires-python = ">=3.11"
 license = {text = "MIT"}
 authors = [{name = "zircote"}]
 dependencies = [
-    "click>=8.0",
+    "click>=8.3.2",
     "datasets>=4.8.4",
     "anthropic>=0.40",
     "pydantic>=2.0",
