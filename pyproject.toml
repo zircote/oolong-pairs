@@ -9,7 +9,7 @@ authors = [{name = "zircote"}]
 dependencies = [
     "click>=8.3.2",
     "datasets>=4.8.4",
-    "anthropic>=0.40",
+    "anthropic>=0.94.0",
     "pydantic>=2.13.0",
     "rich>=15.0.0",
 ]
